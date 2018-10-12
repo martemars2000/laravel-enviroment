@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "shared", "/var/www/html", type: "rsync",
+  config.vm.synced_folder "", "/var/www/html", type: "rsync",
     rsync__exclude: ".git/",
 	rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z"]
 
@@ -81,8 +81,7 @@ Vagrant.configure("2") do |config|
 	#chef.roles_path = "chef/roles_enabled"
     #chef.add_role "main"
 	chef.run_list = [
-		"recipe[env-cookbook-main]",
-		"recipe[nginx]"
+		"recipe[env-cookbook-main]"
 	]
   end
 	

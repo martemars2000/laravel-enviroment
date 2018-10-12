@@ -1,0 +1,6 @@
+DEPENDENCIES
+  env-cookbook-main
+    path: ../env-cookbook-main
+
+GRAPH
+  env-cookbook-main (0.1.0)

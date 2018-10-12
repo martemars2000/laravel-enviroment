@@ -1,4 +1,4 @@
-Vagrant + Cheff + LEMP Stack Environment
+LEMP Stack Environment over vagrant
 ========================================
 
 Setup the Local Development Environment (LDE)
@@ -46,4 +46,4 @@ Tips for work on this setup
 
 ### Update files on the shared folder to start working
 
-The shared folder points to "/var/www/html/" folder, that makes easier to edit 
+This entire folder points to "/var/www/html/" folder, that makes easier to work and edit larravel project files in your local enviroment.
