@@ -46,8 +46,8 @@ Tips for work on this setup
 
 ### Update files on the shared folder to start working
 
-This entire folder points to "/var/www/html/" folder, that makes easier to work and edit larravel project files in your local enviroment.
-To reload laravel project changes on the virtual environment just type "vagrant rsync" and the latest changes will be copied to the VM.
+This entire folder points to **"/var/www/html/"** folder, that makes easier to work and edit larravel project files in your local enviroment.
+To reload laravel project changes on the virtual environment just type **"vagrant rsync"** and the latest changes will be copied to the VM.
 
 ### About Berkshelf
 With Berkshelf you can provision new automated packages adding them to the berksfile like that:
