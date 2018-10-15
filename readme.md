@@ -30,7 +30,7 @@ Now install Vagrant plugins
 	# Keep your VirtualBox Guest Additions up to date
 	vagrant plugin install vagrant-vbguest
 
-	
+
 ### 3. Start (init) the VM with Vagrant
 
     vagrant up
@@ -38,7 +38,7 @@ Now install Vagrant plugins
 	
 ### 4. Start browsing
 
-Once the VM is loaded, enter on http://192.168.33.199 to check if the services are woking fine. 
+Once the VM is loaded, enter on [http://192.168.33.199](http://192.168.33.199) to check if the services are woking fine. 
 
 
 Tips for work on this setup
@@ -47,3 +47,30 @@ Tips for work on this setup
 ### Update files on the shared folder to start working
 
 This entire folder points to "/var/www/html/" folder, that makes easier to work and edit larravel project files in your local enviroment.
+To reload laravel project changes on the virtual environment just type "vagrant rsync" and the latest changes will be copied to the VM.
+
+### About Berkshelf
+With Berkshelf you can provision new automated packages adding them to the berksfile like that:
+	cookbook 'nginx', '~> 8.1.6'
+Also you have to add them on the vagrantfile to load into the VM.
+	chef.run_list = [
+      "recipe[env-cookbook-main]",
+	  "recipe[nginx]" <-- ADD THIS LINE
+    ]
+
+### Other useful vagrant commands
+
+If you want to restart the VM:
+	vagrant reload
+
+If you want to force the provision when reloads
+	vagrant reload --provision
+
+If you want to reprovision witout restart the VM:
+	vagrant provision
+
+If you want to shut down the VM:
+	vagrant halt
+
+If you want to destroy the VM(when you want to start from scrach or delete this repository):
+	vagrant destroy
