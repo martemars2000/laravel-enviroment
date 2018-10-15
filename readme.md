@@ -51,26 +51,35 @@ To reload laravel project changes on the virtual environment just type "vagrant 
 
 ### About Berkshelf
 With Berkshelf you can provision new automated packages adding them to the berksfile like that:
+
 	cookbook 'nginx', '~> 8.1.6'
+
 Also you have to add them on the vagrantfile to load into the VM.
+
 	chef.run_list = [
       "recipe[env-cookbook-main]",
 	  "recipe[nginx]" <-- ADD THIS LINE
     ]
 
+
 ### Other useful vagrant commands
 
 If you want to restart the VM:
+
 	vagrant reload
 
 If you want to force the provision when reloads
+
 	vagrant reload --provision
 
 If you want to reprovision witout restart the VM:
+
 	vagrant provision
 
 If you want to shut down the VM:
+
 	vagrant halt
 
 If you want to destroy the VM(when you want to start from scrach or delete this repository):
+
 	vagrant destroy
