@@ -1,7 +1,7 @@
 source "https://supermarket.getchef.com"
 
-# cookbook 'env-cookbook-main', github: 'martemars2000/env-cookbook-main'
-cookbook 'env-cookbook-main', path: '../env-cookbook-main'
+cookbook 'env-cookbook-main', github: 'martemars2000/env-cookbook-main'
+# cookbook 'env-cookbook-main', path: '../env-cookbook-main'
 # cookbook 'nginx', '~> 8.1.6'
 # cookbook 'php', '~> 6.1.1'
 # cookbook 'php-fpm', '~> 0.8.0'
