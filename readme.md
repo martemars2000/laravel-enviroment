@@ -30,13 +30,19 @@ Now install Vagrant plugins
 	# Keep your VirtualBox Guest Additions up to date
 	vagrant plugin install vagrant-vbguest
 
+### 3. Configuration files
 
-### 3. Start (init) the VM with Vagrant
+Copy and edit the configuration files needed to run Vagrant.
+
+    cp .env.local .env
+
+
+### 4. Start (init) the VM with Vagrant
 
     vagrant up
 
 	
-### 4. Start browsing
+### 5. Start browsing
 
 Once the VM is loaded, enter on [http://192.168.33.199](http://192.168.33.199) to check if the services are woking fine. 
 
