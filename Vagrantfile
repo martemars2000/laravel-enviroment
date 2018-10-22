@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
     rsync__args: ["--verbose", "--rsync-path='sudo rsync'", "--archive", "--delete", "-z"], 
     :owner => "www-data", 
     :group => "www-data", 
-    :mount_options => ['dmode=775', 'fmode=664']
+    :mount_options => ['dmode=777', 'fmode=777']
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
